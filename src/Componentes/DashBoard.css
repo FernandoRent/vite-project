@@ -1,0 +1,25 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea los elementos hacia la parte superior */
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  text-align: center;
+  padding: 20px; /* Añade un poco de padding */
+}
+
+.dashboard-title {
+  font-size: 2.5rem; /* Aumenta el tamaño de la fuente del título */
+  margin-bottom: 40px; /* Añade más espacio debajo del título */
+}
+
+.reloj-card {
+  max-width: 600px; /* Aumenta el ancho máximo del reloj */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  margin: 20px auto;
+  padding: 40px; /* Aumenta el padding */
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 2rem; /* Aumenta el tamaño de la fuente del contenido */
+}

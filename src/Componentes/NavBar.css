@@ -1,0 +1,12 @@
+.MuiAppBar-root {
+    background-color: #1976d2;
+    width: 100%; 
+    position: fixed; 
+    left: 0;
+  }
+  
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
