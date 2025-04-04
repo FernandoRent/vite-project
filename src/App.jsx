@@ -17,16 +17,22 @@ function App() {
     <Router>
       {isAuthenticated && <NavBar handleLogout={handleLogout} />}
       <Routes>
-        <Route path="/login" element={<Login setAuth={setIsAuthenticated} />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route 
+          path="/login" 
+          element={
+            isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login setAuth={setIsAuthenticated} />
+          } 
+        />
         <Route
           path="/dashboard"
-          element={isAuthenticated ? <DashBoard /> : <Navigate to="/login" />}
+          element={isAuthenticated ? <DashBoard /> : <Navigate to="/login" replace />}
         />
         <Route
           path="/contacto"
-          element={isAuthenticated ? <Contacto /> : <Navigate to="/login" />}
+          element={isAuthenticated ? <Contacto /> : <Navigate to="/login" replace />}
         />
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
