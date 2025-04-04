@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, TextField, Button, Box, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import PropTypes from 'prop-types';
 import "../Componentes/Login.css"; // Importando el CSS
 
 const Login = ({ setAuth }) => {
@@ -42,6 +43,10 @@ const Login = ({ setAuth }) => {
       </Box>
     </Container>
   );
+};
+
+Login.propTypes = {
+  setAuth: PropTypes.func.isRequired
 };
 
 export default Login;
