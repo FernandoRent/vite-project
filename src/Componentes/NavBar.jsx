@@ -1,6 +1,5 @@
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 import "../Componentes/NavBar.css"; // Importando el CSS
 
 const NavBar = ({ handleLogout }) => {
@@ -22,10 +21,6 @@ const NavBar = ({ handleLogout }) => {
       </Toolbar>
     </AppBar>
   );
-};
-
-NavBar.propTypes = {
-  handleLogout: PropTypes.func.isRequired
 };
 
 export default NavBar;
