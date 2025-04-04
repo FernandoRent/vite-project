@@ -12,8 +12,14 @@ describe('Login Component', () => {
       </BrowserRouter>
     )
 
-    expect(screen.getByText('Iniciar Sesión')).toBeInTheDocument()
+    // Verificar el título
+    expect(screen.getByRole('heading', { name: 'Iniciar Sesión' })).toBeInTheDocument()
+    
+    // Verificar los campos de entrada
     expect(screen.getByLabelText('Usuario')).toBeInTheDocument()
     expect(screen.getByLabelText('Contraseña')).toBeInTheDocument()
+    
+    // Verificar el botón
+    expect(screen.getByRole('button', { name: 'Iniciar Sesión' })).toBeInTheDocument()
   })
 }) 
